@@ -5,7 +5,7 @@ export default function Home() {
 		<>
 			<Hero />
 			<SelectedWorks />
-			<Experiences />
+			{/* <Experiences /> */}
 			<AboutMe />
 		</>
 	)

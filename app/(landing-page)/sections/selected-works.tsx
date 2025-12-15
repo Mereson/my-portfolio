@@ -29,7 +29,7 @@ export const SelectedWorks = () => {
 						tag="h1"
 						variant="h1"
 						font="outfit"
-						// color="secondary"
+						color="secondary"
 						fontWeight="light"
 						customClassName="leading-[110%]"
 					>

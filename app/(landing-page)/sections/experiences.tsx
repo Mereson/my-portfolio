@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Experiences = () => {
   return (
-    <div>Experiences</div>
+<section className='pt-40'>
+<div></div>
+</section>
   )
 }

@@ -1,13 +1,43 @@
+"use client"
 import Image from "next/image"
 import MyPicture from "@/public/assets/images/Chimere_Ojinta.jpg"
 import { Typography } from "@/ui"
 import { ShowWorks } from "../components"
+import { FloatingShapes } from "@/public"
+import { useEffect, useRef } from "react"
 
 export const Hero = () => {
+	const sectionRef = useRef<HTMLElement>(null)
+
+	useEffect(() => {
+		const section = sectionRef.current
+		if (!section) return
+
+		const handleScroll = () => {
+			const rect = section.getBoundingClientRect()
+			const progress = Math.min(Math.max(-rect.top / rect.height, 0), 1)
+
+			section.style.setProperty("--scroll", progress.toString())
+		}
+
+		handleScroll()
+		window.addEventListener("scroll", handleScroll, { passive: true })
+
+		return () => window.removeEventListener("scroll", handleScroll)
+	}, [])
+
 	return (
-		<section className="mt-24 grid place-items-center gap-8 mb-38">
-			<Image src={MyPicture} className="w-140 rounded-4xl" alt="My picture" />
-			<div className="grid gap-4">
+		<section
+			ref={sectionRef}
+			className="pt-24 grid place-items-center gap-8 mb-38 relative"
+		>
+			<FloatingShapes />
+			<Image
+				src={MyPicture}
+				className="w-140 rounded-4xl parallax-image-hero"
+				alt="My picture"
+			/>
+			<div className="grid gap-4 parallax-text-hero">
 				<Typography
 					variant="h1"
 					fontWeight="semi-bold"
@@ -23,13 +53,15 @@ export const Hero = () => {
 					fontWeight="light"
 					color="primary-muted"
 					align="center"
-					customClassName="max-w-150 leading-[150%]!"
+					customClassName="max-w-150 leading-[150%]! z-10!"
 				>
 					Premium web design, development, and SEO services to help your
 					business stand out.
 				</Typography>
 			</div>
-			<ShowWorks />
+			<div className="parallax-cta-hero">
+				<ShowWorks />
+			</div>
 		</section>
 	)
 }

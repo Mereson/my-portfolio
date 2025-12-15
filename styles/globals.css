@@ -1,9 +1,71 @@
 @import "tailwindcss";
 
 body {
-    background-color: #ffffff;
+	background-color: #ffffff;
 }
 
 .border {
-    border: 1px solid black;
+	border: 1px solid black;
+}
+
+.floating-bg {
+    transform: translateY(calc(var(--scroll, 0) * 165px));
+  }
+
+.parallax-image-hero {
+	transform: translateY(calc(var(--scroll, 0) * 25px));
+	transition: transform 0.1s linear;
+}
+
+.parallax-text-hero {
+	transform: translateY(calc(var(--scroll, 0) * 35px));
+	transition: transform 0.1s linear;
+}
+
+.parallax-cta-hero {
+	transform: translateY(calc(var(--scroll, 0) * 15px));
+	transition: transform 0.1s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-bg,
+  .parallax-image,
+  .parallax-text,
+  .parallax-cta {
+    transform: none !important;
+  }
+}
+
+.awesome-wrapper {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+
+.awesome {
+	display: inline-block;
+	white-space: nowrap;
+	width: 0;
+	animation:
+		typing 2s steps(8, end) forwards,
+		clear 2s steps(8, end) forwards;
+	animation-delay: 0s, 5s;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 8ch;
+	}
+}
+
+@keyframes clear {
+	from {
+		width: 8ch;
+	}
+	to {
+		width: 0;
+	}
 }
