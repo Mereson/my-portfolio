@@ -5,6 +5,7 @@ import { Typography } from "@/ui"
 import { ShowWorks } from "../components"
 import { FloatingShapes } from "@/public"
 import { useEffect, useRef } from "react"
+import { onHeroScroll } from "@/utils"
 
 export const Hero = () => {
 	const sectionRef = useRef<HTMLElement>(null)
@@ -13,14 +14,8 @@ export const Hero = () => {
 		const section = sectionRef.current
 		if (!section) return
 
-		const handleScroll = () => {
-			const rect = section.getBoundingClientRect()
-			const progress = Math.min(Math.max(-rect.top / rect.height, 0), 1)
+		const handleScroll = () => onHeroScroll(section) 
 
-			section.style.setProperty("--scroll", progress.toString())
-		}
-
-		handleScroll()
 		window.addEventListener("scroll", handleScroll, { passive: true })
 
 		return () => window.removeEventListener("scroll", handleScroll)

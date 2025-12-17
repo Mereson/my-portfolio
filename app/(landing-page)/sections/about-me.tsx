@@ -3,6 +3,7 @@ import Image from "next/image"
 import MyPicture from "@/public/assets/images/my_picture.png"
 import { Typography } from "@/ui"
 import { useEffect, useState } from "react"
+import { setAboutMeObserver } from "@/utils"
 
 export const AboutMe = () => {
 	const [showTypedText, setShowTypedText] = useState(false)
@@ -11,22 +12,7 @@ export const AboutMe = () => {
 		const aboutMe = document.getElementById("about-me")
 		if (!aboutMe) return
 
-		const observer = new IntersectionObserver(
-			(entries) => {
-				const entry = entries[0]
-
-				if (entry.isIntersecting) {
-					setShowTypedText(true)
-				} else {
-					setShowTypedText(false)
-				}
-			},
-			{
-				root: null,
-				threshold: 0,
-				rootMargin: "-1px",
-			}
-		)
+		const observer = setAboutMeObserver(setShowTypedText)
 
 		observer.observe(aboutMe)
 
@@ -52,7 +38,6 @@ export const AboutMe = () => {
 						fontWeight="semi-bold"
 						font="genos"
 						customClassName="typewriter text-[55px]"
-						// align="center"
 					>
 						Chimere&nbsp;
 						{showTypedText && (

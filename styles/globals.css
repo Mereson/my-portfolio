@@ -9,8 +9,8 @@ body {
 }
 
 .floating-bg {
-    transform: translateY(calc(var(--scroll, 0) * 165px));
-  }
+	transform: translateY(calc(var(--scroll, 0) * 165px));
+}
 
 .parallax-image-hero {
 	transform: translateY(calc(var(--scroll, 0) * 25px));
@@ -28,13 +28,24 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .floating-bg,
-  .parallax-image,
-  .parallax-text,
-  .parallax-cta {
-    transform: none !important;
-  }
+	.floating-bg,
+	.parallax-image,
+	.parallax-text,
+	.parallax-cta {
+		transform: none !important;
+	}
 }
+
+.service-card__reveal {
+	will-change: transform;
+	transform: translateY(calc((1 - var(--p, 0)) * 100%));
+}
+
+@keyframes wave {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
 
 .awesome-wrapper {
 	display: inline-block;
