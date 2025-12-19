@@ -29,6 +29,7 @@ body {
 
 .hills1 {
 	transform: translateY(calc(var(--hill, 0) * 65px));
+	transition: transform 0.1s linear;
 }
 .hills2 {
 	transform: translateY(calc(var(--hill, 0) * 35px));
@@ -36,12 +37,15 @@ body {
 }
 .hills3 {
 	transform: translateY(calc(var(--hill, 0) * 40px));
+	transition: transform 0.1s linear;
 }
 .hills4 {
 	transform: translateY(calc(var(--hill, 0) * 20px));
+	transition: transform 0.1s linear;
 }
 .hills5 {
 	transform: translateY(calc(var(--hill, 0) * 70px));
+	transition: transform 0.1s linear;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -84,26 +88,6 @@ body {
 	animation-delay: 0s, 5s;
 }
 
-.about-me-bg {
-	background-color: color-mix(
-		in srgb,
-		#ffffff calc(100% - var(--colorShift, 0) * 100%),
-		#161616 calc(var(--colorShift, 0) * 100%)
-	);
-
-	transition: background-color 0.10s linear;
-}
-
-.about-me-text {
-	color: color-mix(
-		in srgb,
-		#161616 calc(100% - var(--colorShift, 0) * 100%),
-		#ffffff calc(var(--colorShift, 0) * 100%)
-	) !important;
-
-	transition: color 0.10s linear;
-}
-
 @keyframes typing {
 	from {
 		width: 0;
@@ -120,4 +104,35 @@ body {
 	to {
 		width: 0;
 	}
+}
+
+.about-me-bg {
+	background-color: color-mix(
+		in srgb,
+		#ffffff calc(100% - var(--colorShift, 0) * 100%),
+		#161616 calc(var(--colorShift, 0) * 100%)
+	);
+
+	transition: background-color 0.2s linear;
+}
+
+.about-me-text {
+	color: color-mix(
+		in srgb,
+		#161616 calc(100% - var(--colorShift, 0) * 100%),
+		#ffffff calc(var(--colorShift, 0) * 100%)
+	) !important;
+
+	transition: color 0.1s linear;
+}
+
+.section-blend {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	pointer-events: none;
+
+	background: linear-gradient(to bottom, #161616 0%, transparent 60%);
 }

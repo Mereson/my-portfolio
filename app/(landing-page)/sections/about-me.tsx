@@ -35,9 +35,13 @@ export const AboutMe = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className="grid overflow-hidden w-screen pt-[12.313rem] about-me-bg"
+			className="grid overflow-hidden relative w-screen pt-[12.313rem] about-me-bg"
 		>
-			<section id="about-me" className="flex items-center justify-center gap-20">
+			<div className="section-blend"></div>
+			<section
+				id="about-me"
+				className="flex items-center justify-center gap-20"
+			>
 				<article className="grid gap-3">
 					<Typography
 						variant="h1"
@@ -59,7 +63,11 @@ export const AboutMe = () => {
 						your vision to life!
 					</Typography>
 				</article>
-				<Image src={My_Picture} className="size-102 rounded-3xl shadow-lg" alt="My Picture"/>
+				<Image
+					src={My_Picture}
+					className="size-102 rounded-3xl shadow-lg"
+					alt="My Picture"
+				/>
 			</section>
 			<Hilly />
 		</section>
