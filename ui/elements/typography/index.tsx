@@ -27,6 +27,7 @@ const typography = cva("", {
 			primary: "text-[#0E0E0E]",
 			"primary-muted": "text-[#999999]",
 			secondary: "text-[#E7A03A]",
+			white: "text-white"
 		},
 		font: { outfit: outfit, nunito: nunito, genos: genos },
 		fontWeight: {

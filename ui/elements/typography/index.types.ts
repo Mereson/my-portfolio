@@ -22,7 +22,7 @@ export const variantMapping = {
 
 export type TypographyVariant = keyof typeof variantMapping
 
-export type TypographyColors = "primary" | "primary-muted" | "secondary"
+export type TypographyColors = "primary" | "primary-muted" | "secondary" | "white"
 
 export type TypographyAlign =
 	| "start"

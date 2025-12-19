@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react"
 
-export const setAboutMeObserver = (
+export const setTextTyperObserver = (
 	setShowTypedText: Dispatch<SetStateAction<boolean>>
 ): IntersectionObserver => {
 	const observer = new IntersectionObserver(

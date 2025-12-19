@@ -5,6 +5,9 @@ import { onServicesCardScroll, ServicesProps } from "@/utils"
 import clsx from "clsx"
 import { useEffect, useRef } from "react"
 
+const vhMultiplier = 0.3
+const rtMultiplier = 1.3
+
 export const ServicesCard = ({ services }: { services: ServicesProps }) => {
 	const cardRef = useRef<HTMLElement>(null)
 
@@ -12,7 +15,8 @@ export const ServicesCard = ({ services }: { services: ServicesProps }) => {
 		const card = cardRef.current
 		if (!card) return
 
-		const handleScroll = () => onServicesCardScroll(card)
+		const handleScroll = () =>
+			onServicesCardScroll(card, "--p", { vhMultiplier, rtMultiplier })
 
 		window.addEventListener("scroll", handleScroll, { passive: true })
 
@@ -22,7 +26,7 @@ export const ServicesCard = ({ services }: { services: ServicesProps }) => {
 	return (
 		<section
 			ref={cardRef}
-			className=" relative overflow-hidden bg-[#d9c4a626] p-12 col-span-1"
+			className=" relative overflow-hidden bg-white p-12 col-span-1"
 		>
 			<div
 				className={clsx(

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-	background-color: #ffffff;
+	background: #161616;
 }
 
 .border {
@@ -27,11 +27,29 @@ body {
 	transition: transform 0.1s linear;
 }
 
+.hills1 {
+	transform: translateY(calc(var(--hill, 0) * 65px));
+}
+.hills2 {
+	transform: translateY(calc(var(--hill, 0) * 35px));
+	transition: transform 0.1s linear;
+}
+.hills3 {
+	transform: translateY(calc(var(--hill, 0) * 40px));
+}
+.hills4 {
+	transform: translateY(calc(var(--hill, 0) * 20px));
+}
+.hills5 {
+	transform: translateY(calc(var(--hill, 0) * 70px));
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.floating-bg,
 	.parallax-image,
 	.parallax-text,
-	.parallax-cta {
+	.parallax-cta,
+	.hills {
 		transform: none !important;
 	}
 }
@@ -42,10 +60,13 @@ body {
 }
 
 @keyframes wave {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
 
 .awesome-wrapper {
 	display: inline-block;
@@ -61,6 +82,26 @@ body {
 		typing 2s steps(8, end) forwards,
 		clear 2s steps(8, end) forwards;
 	animation-delay: 0s, 5s;
+}
+
+.about-me-bg {
+	background-color: color-mix(
+		in srgb,
+		#ffffff calc(100% - var(--colorShift, 0) * 100%),
+		#161616 calc(var(--colorShift, 0) * 100%)
+	);
+
+	transition: background-color 0.10s linear;
+}
+
+.about-me-text {
+	color: color-mix(
+		in srgb,
+		#161616 calc(100% - var(--colorShift, 0) * 100%),
+		#ffffff calc(var(--colorShift, 0) * 100%)
+	) !important;
+
+	transition: color 0.10s linear;
 }
 
 @keyframes typing {

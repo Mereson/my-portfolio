@@ -1,12 +1,13 @@
-import { AboutMe, Experiences, Hero, SelectedWorks } from "./sections"
+import { AboutMe, Experiences, Footer, Hero, SelectedWorks } from "./sections"
 
 export default function Home() {
 	return (
 		<>
 			<Hero />
 			<SelectedWorks />
-			{/* <Experiences /> */}
 			<AboutMe />
+			<Experiences />
+			<Footer/>
 		</>
 	)
 }

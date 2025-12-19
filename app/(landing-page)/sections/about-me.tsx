@@ -1,57 +1,56 @@
 "use client"
-import Image from "next/image"
-import MyPicture from "@/public/assets/images/my_picture.png"
 import { Typography } from "@/ui"
-import { useEffect, useState } from "react"
-import { setAboutMeObserver } from "@/utils"
+import { useEffect, useRef } from "react"
+import My_Picture from "@/public/assets/images/Chimere_Ojinta.jpg"
+import { handleParallaxScroll, onServicesCardScroll } from "@/utils"
+import { Hilly } from "@/public"
+import Image from "next/image"
+
+const vhMultiplier = 0.3
+const rtMultiplier = 1.7
 
 export const AboutMe = () => {
-	const [showTypedText, setShowTypedText] = useState(false)
+	const sectionRef = useRef<HTMLElement>(null)
 
 	useEffect(() => {
-		const aboutMe = document.getElementById("about-me")
-		if (!aboutMe) return
+		const section = sectionRef.current
+		if (!section) return
 
-		const observer = setAboutMeObserver(setShowTypedText)
+		const handleScroll = () => handleParallaxScroll(section, "--hill")
+		const handleBackgroundScroll = () =>
+			onServicesCardScroll(section, "--colorShift", {
+				vhMultiplier,
+				rtMultiplier,
+			})
 
-		observer.observe(aboutMe)
+		window.addEventListener("scroll", handleScroll, { passive: true })
+		window.addEventListener("scroll", handleBackgroundScroll, { passive: true })
 
 		return () => {
-			observer.disconnect()
+			window.removeEventListener("scroll", handleScroll)
+			window.removeEventListener("scroll", handleBackgroundScroll)
 		}
 	}, [])
 
 	return (
-		<section className="flex justify-center">
-			<section
-				id="about-me"
-				className="mt-[12.313rem] pb-20 flex gap-20 items-center max-w-[1400px]"
-			>
-				<Image
-					src={MyPicture}
-					className="size-152 object-cover object-top rounded-xl"
-					alt="My Picture"
-				/>
+		<section
+			ref={sectionRef}
+			className="grid overflow-hidden w-screen pt-[12.313rem] about-me-bg"
+		>
+			<section id="about-me" className="flex items-center justify-center gap-20">
 				<article className="grid gap-3">
 					<Typography
 						variant="h1"
 						fontWeight="semi-bold"
 						font="genos"
-						customClassName="typewriter text-[55px]"
+						customClassName="about-me-text text-[55px]"
 					>
-						Chimere&nbsp;
-						{showTypedText && (
-							<>
-								<span className="awesome-wrapper">
-									<span className="awesome">Awesome</span>
-								</span>
-							</>
-						)}
-						&nbsp;Ojinta
+						Chimere Ojinta
 					</Typography>
 					<Typography
 						variant="body-l"
-						customClassName="leading-[150%] max-w-[600px]"
+						color="white"
+						customClassName="about-me-text leading-[150%] max-w-[560px]"
 					>
 						Hi, I&apos;m Chimere Ojinta - a freelancer specializing in premium
 						web design, development, and SEO services. I&apos;m passionate about
@@ -60,7 +59,9 @@ export const AboutMe = () => {
 						your vision to life!
 					</Typography>
 				</article>
+				<Image src={My_Picture} className="size-102 rounded-3xl shadow-lg" alt="My Picture"/>
 			</section>
+			<Hilly />
 		</section>
 	)
 }

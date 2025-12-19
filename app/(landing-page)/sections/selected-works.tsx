@@ -6,7 +6,7 @@ export const SelectedWorks = () => {
 	return (
 		<section
 			id="selected-works"
-			className="pt-[0.813rem] max-w-[1400px] mx-auto"
+			className="pt-[0.813rem] pb-20 relative max-w-[1400px] mx-auto"
 		>
 			<div className="grid grid-cols-3 gap-8 place-items-center">
 				{services.map((service, i) => (
