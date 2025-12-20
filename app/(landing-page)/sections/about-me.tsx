@@ -34,6 +34,7 @@ export const AboutMe = () => {
 
 	return (
 		<section
+			id="about-me"
 			ref={sectionRef}
 			className="grid overflow-hidden relative w-screen pt-[12.313rem] about-me-bg"
 		>

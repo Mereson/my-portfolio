@@ -25,7 +25,10 @@ export const CTA = () => {
 		}
 	}, [])
 	return (
-		<section className="h-screen relative overflow-hidden grid bg-[#220F40] w-full place-content-center ">
+		<section
+			id="contact"
+			className="h-screen relative overflow-hidden grid bg-[#220F40] w-full place-content-center "
+		>
 			<Image
 				src={Stars}
 				className="absolute top-0 rotate-180 z-1 w-full"
@@ -62,7 +65,7 @@ export const CTA = () => {
 				</Link>
 			</div>
 			<div className="grid place-items-center w-full mt-10 mb-6">
-				<hr className="border-[#f4f4f4] w-[40%] z-1" />
+				<hr className="border-[#f4f4f4] w-[15%] z-1" />
 			</div>
 			<div className="grid place-items-center gap-7 py-4 bg-[#220F40] z-4">
 				<Typography

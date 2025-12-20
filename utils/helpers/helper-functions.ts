@@ -10,3 +10,4 @@ export const getFloatAnimation = (duration = 20, left: number): TargetAndTransit
 		ease: easeInOut,
 	},
 })
+

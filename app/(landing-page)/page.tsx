@@ -1,8 +1,9 @@
-import { AboutMe, CTA, Hero, SelectedWorks } from "./sections"
+import { AboutMe, CTA, Hero, Navbar, SelectedWorks } from "./sections"
 
 export default function Home() {
 	return (
 		<>
+			<Navbar />
 			<Hero />
 			<SelectedWorks />
 			<AboutMe />

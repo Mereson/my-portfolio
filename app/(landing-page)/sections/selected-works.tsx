@@ -13,7 +13,7 @@ export const SelectedWorks = () => {
 					<ServicesCard key={i} services={service} />
 				))}
 			</div>
-			<section className="mt-40">
+			<section id="selected-section" className="mt-40">
 				<div className="flex items-baseline gap-2 ml-8 mb-8">
 					<Typography
 						tag="h1"
