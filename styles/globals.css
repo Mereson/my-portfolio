@@ -4,10 +4,6 @@ body {
 	background: #161616;
 }
 
-.border {
-	border: 1px solid black;
-}
-
 .floating-bg {
 	transform: translateY(calc(var(--scroll, 0) * 165px));
 }

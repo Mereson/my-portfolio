@@ -1,4 +1,4 @@
-import { AboutMe, Experiences, Footer, Hero, SelectedWorks } from "./sections"
+import { AboutMe, CTA, Hero, SelectedWorks } from "./sections"
 
 export default function Home() {
 	return (
@@ -6,8 +6,7 @@ export default function Home() {
 			<Hero />
 			<SelectedWorks />
 			<AboutMe />
-			<Experiences />
-			<Footer/>
+			<CTA />
 		</>
 	)
 }
