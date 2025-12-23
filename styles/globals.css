@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+body {
+	background: #161616;
+}
+
+.floating-bg {
+	transform: translateY(calc(var(--scroll, 0) * 165px));
+}
+
+.parallax-image-hero {
+	transform: translateY(calc(var(--scroll, 0) * 25px));
+	transition: transform 0.1s linear;
+}
+
+.parallax-text-hero {
+	transform: translateY(calc(var(--scroll, 0) * 35px));
+	transition: transform 0.1s linear;
+}
+
+.parallax-cta-hero {
+	transform: translateY(calc(var(--scroll, 0) * 15px));
+	transition: transform 0.1s linear;
+}
+
+.hills1 {
+	transform: translateY(calc(var(--hill, 0) * 65px));
+	transition: transform 0.1s linear;
+}
+.hills2 {
+	transform: translateY(calc(var(--hill, 0) * 35px));
+	transition: transform 0.1s linear;
+}
+.hills3 {
+	transform: translateY(calc(var(--hill, 0) * 40px));
+	transition: transform 0.1s linear;
+}
+.hills4 {
+	transform: translateY(calc(var(--hill, 0) * 20px));
+	transition: transform 0.1s linear;
+}
+.hills5 {
+	transform: translateY(calc(var(--hill, 0) * 70px));
+	transition: transform 0.1s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.floating-bg,
+	.parallax-image,
+	.parallax-text,
+	.parallax-cta,
+	.hills {
+		transform: none !important;
+	}
+}
+
+.service-card__reveal {
+	will-change: transform;
+	transform: translateY(calc((1 - var(--p, 0)) * 100%));
+}
+
+@keyframes wave {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.awesome-wrapper {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+
+.awesome {
+	display: inline-block;
+	white-space: nowrap;
+	width: 0;
+	animation:
+		typing 2s steps(8, end) forwards,
+		clear 2s steps(8, end) forwards;
+	animation-delay: 0s, 5s;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 8ch;
+	}
+}
+
+@keyframes clear {
+	from {
+		width: 8ch;
+	}
+	to {
+		width: 0;
+	}
+}
+
+.about-me-bg {
+	background-color: color-mix(
+		in srgb,
+		#ffffff calc(100% - var(--colorShift, 0) * 100%),
+		#161616 calc(var(--colorShift, 0) * 100%)
+	);
+
+	transition: background-color 0.2s linear;
+}
+
+.about-me-text {
+	color: color-mix(
+		in srgb,
+		#161616 calc(100% - var(--colorShift, 0) * 100%),
+		#ffffff calc(var(--colorShift, 0) * 100%)
+	) !important;
+
+	transition: color 0.1s linear;
+}
+
+.section-blend {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	pointer-events: none;
+
+	background: linear-gradient(to bottom, #161616 0%, transparent 60%);
+}
+
+.work-bg {
+	background-color: #161616;
+	transition: background-color 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-bg.is-visible {
+	background-color: #ffffff;
+}

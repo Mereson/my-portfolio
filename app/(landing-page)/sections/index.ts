@@ -1,0 +1,5 @@
+export * from "./navbar"
+export * from "./hero"
+export * from "./selected-works"
+export * from "./about-me"
+export * from "./cta"

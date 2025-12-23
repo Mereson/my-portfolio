@@ -1,0 +1,43 @@
+import { getFloatAnimation }  from "@/utils"
+import { motion } from "framer-motion"
+
+export const FloatingStars = ({num, left = 100}: {num: number, left?: number}) => {
+  return (
+<svg className='absolute floating-bg inset-0 -z-10 w-full h-full pointer-events-none' width="1226" height="969" viewBox="0 0 1226 969" fill="none" xmlns="http://www.w3.org/2000/svg">
+<motion.g animate={getFloatAnimation(22 * num, left)}><circle cx="2.56647" cy="2.56647" r="2.56647" transform="matrix(-1 0 0 1 662.15 627.503)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(27 * num, left)}><circle cx="2.56647" cy="2.56647" r="2.56647" transform="matrix(-1 0 0 1 1225.49 563.341)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(25 * num, left)}><circle cx="2.56647" cy="2.56647" r="2.56647" transform="matrix(-1 0 0 1 419.618 51.3293)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(19 * num, left)}><circle cx="2.56647" cy="2.56647" r="2.56647" transform="matrix(-1 0 0 1 100.092 728.878)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(28 * num, left)}><circle cx="2.56647" cy="2.56647" r="2.56647" transform="matrix(-1 0 0 1 899.548 873.884)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(23 * num, left)}><circle cx="2.56647" cy="2.56647" r="2.56647" transform="matrix(-1 0 0 1 680.115 171.954)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(26 * num, left)}><circle cx="2.56647" cy="2.56647" r="2.56647" transform="matrix(-1 0 0 1 162.85 386.867)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(21 * num, left)}><circle cx="2.56647" cy="2.56647" r="2.56647" transform="matrix(-1 0 0 1 569.757 313.11)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(24 * num, left)}><circle cx="583.231" cy="678.19" r="1.92485" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(20 * num, left)}><circle cx="1210.73" cy="60.9537" r="1.92485" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(10 * num, left)}><circle cx="843.728" cy="768.017" r="1.92485" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(22 * num, left)}><circle cx="585.797" cy="756.468" r="4.49133" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(19 * num, left)}><circle cx="836.028" cy="566.549" r="3.20809" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(25 * num, left)}><circle cx="987.45" cy="232.907" r="4.49133" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(23 * num, left)}><rect x="863.618" y="367.334" width="1.94117" height="1.94117" rx="0.265094" transform="rotate(-24.4476 863.618 367.334)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(21 * num, left)}><rect x="479.93" y="754.871" width="3.89396" height="3.89396" rx="0.531777" transform="rotate(-24.4476 479.93 754.871)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(15 * num, left)}><rect x="1169.03" y="965.322" width="3.89396" height="3.89396" rx="0.531777" transform="rotate(-24.4476 1169.03 965.322)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(29 * num, left)}><rect y="127.369" width="3.89396" height="3.89396" rx="0.531777" transform="rotate(-24.4476 0 127.369)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(18 * num, left)}><rect x="620.784" y="425.434" width="3.37824" height="3.37824" rx="0.481997" transform="rotate(35.3063 620.784 425.434)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(24 * num, left)}><rect x="716.711" y="723.656" width="4.02097" height="4.02097" rx="0.619105" transform="rotate(30.4542 716.711 723.656)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(27 * num, left)}><rect x="1133.1" y="865.282" width="4.02097" height="4.02097" rx="0.619105" transform="rotate(-24.4476 1133.1 865.282)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(12 * num, left)}><rect x="1171.59" y="309.641" width="4.02097" height="4.02097" rx="0.619105" transform="rotate(-24.4476 1171.59 309.641)" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(26 * num, left)}><path d="M1209.55 1.98964C1209.93 1.81854 1210.35 2.12219 1210.31 2.53622L1210.02 5.41008C1209.98 5.82411 1209.5 6.03799 1209.16 5.79507L1206.82 4.10888C1206.48 3.86595 1206.53 3.34842 1206.91 3.17731L1209.55 1.98964Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(23 * num, left)}><path d="M1140.25 403.643C1140.63 403.472 1141.05 403.775 1141.01 404.189L1140.72 407.063C1140.68 407.477 1140.21 407.691 1139.87 407.448L1137.53 405.762C1137.19 405.519 1137.24 405.001 1137.62 404.83L1140.25 403.643Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(32 * num, left)}><path d="M681.372 538.485C681.502 538.727 681.461 539.026 681.27 539.225L679.217 541.363C679.027 541.561 678.73 541.615 678.482 541.495L675.814 540.203C675.567 540.083 675.424 539.818 675.462 539.545L675.866 536.609C675.903 536.336 676.112 536.119 676.383 536.07L679.3 535.547C679.571 535.498 679.842 535.629 679.972 535.872L681.372 538.485Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(12 * num, left)}><path d="M1076.3 58.3951C1076.58 58.3937 1076.82 58.5697 1076.91 58.8309L1077.84 61.6456C1077.93 61.9068 1077.83 62.1939 1077.61 62.3567L1075.22 64.1108C1075 64.2736 1074.7 64.2751 1074.48 64.1145L1072.07 62.3839C1071.85 62.2233 1071.75 61.9371 1071.83 61.675L1072.74 58.8514C1072.82 58.5893 1073.06 58.4109 1073.34 58.4096L1076.3 58.3951Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(29 * num, left)}><path d="M984.829 525.54C984.918 525.644 984.931 525.793 984.86 525.91L984.097 527.167C984.026 527.283 983.888 527.341 983.756 527.31L982.324 526.973C982.191 526.941 982.094 526.828 982.083 526.692L981.961 525.227C981.95 525.091 982.027 524.963 982.153 524.91L983.509 524.342C983.635 524.289 983.78 524.323 983.869 524.427L984.829 525.54Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(18 * num, left)}><path d="M838.904 199.551C839.179 199.55 839.424 199.726 839.51 199.987L840.44 202.802C840.527 203.063 840.435 203.35 840.213 203.513L837.823 205.267C837.602 205.43 837.3 205.431 837.077 205.27L834.67 203.54C834.447 203.379 834.352 203.093 834.436 202.831L835.338 200.007C835.422 199.745 835.665 199.567 835.94 199.566L838.904 199.551Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(17 * num, left)}><path d="M1046.03 629.409C1046.14 629.576 1046.13 629.794 1046 629.948L1044.65 631.607C1044.52 631.761 1044.31 631.816 1044.12 631.744L1042.13 630.967C1041.94 630.895 1041.83 630.712 1041.84 630.514L1041.96 628.375C1041.97 628.177 1042.11 628.008 1042.3 627.957L1044.37 627.412C1044.56 627.362 1044.77 627.441 1044.87 627.608L1046.03 629.409Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(19 * num, left)}><path d="M1067.32 759.042C1067.6 759.041 1067.84 759.217 1067.93 759.478L1068.86 762.293C1068.94 762.554 1068.85 762.841 1068.63 763.004L1066.24 764.758C1066.02 764.921 1065.72 764.922 1065.49 764.762L1063.09 763.031C1062.86 762.871 1062.77 762.584 1062.85 762.322L1063.75 759.499C1063.84 759.237 1064.08 759.058 1064.36 759.057L1067.32 759.042Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(16 * num, left)}><path d="M765.76 889.932C766.035 889.931 766.28 890.107 766.366 890.368L767.296 893.183C767.382 893.444 767.29 893.731 767.068 893.894L764.679 895.648C764.457 895.811 764.156 895.812 763.932 895.652L761.526 893.921C761.302 893.761 761.208 893.474 761.292 893.212L762.194 890.389C762.277 890.127 762.52 889.948 762.796 889.947L765.76 889.932Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(14 * num, left)}><path d="M460.934 529.808C461.148 529.807 461.339 529.945 461.407 530.148L462.132 532.343C462.199 532.547 462.127 532.771 461.955 532.898L460.091 534.266C459.918 534.393 459.683 534.394 459.509 534.269L457.632 532.919C457.458 532.794 457.384 532.571 457.449 532.366L458.153 530.164C458.218 529.96 458.408 529.821 458.622 529.82L460.934 529.808Z" fill="white"/></motion.g>
+<motion.g animate={getFloatAnimation(13 * num, left)}><path d="M490.114 634.574C490.381 634.453 490.679 634.667 490.649 634.959L490.288 638.567C490.259 638.859 489.925 639.01 489.687 638.838L486.742 636.721C486.505 636.55 486.541 636.186 486.808 636.065L490.114 634.574Z" fill="white"/></motion.g>
+</svg>
+
+  )
+}
