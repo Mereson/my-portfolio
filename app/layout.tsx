@@ -5,6 +5,12 @@ import { genos, nunito, outfit } from "@/styles/font"
 export const metadata: Metadata = {
 	title: "Chimere's Portfolio",
 	description: "The portfolio for Chimeremnma Ojinta ",
+	icons: [
+		{
+			rel: "icon",
+			url: "/favicon1.ico",
+		},
+	],
 }
 
 export default function RootLayout({

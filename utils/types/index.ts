@@ -6,14 +6,15 @@ export interface ServicesProps {
 	subtext: string
 }
 
-export interface SelectedWorksProps {
-	"_id": string
-	picture: StaticImageData
+export interface WorksProps {
+	"_id": number
+	picture: StaticImageData | string
 	work: string
+	selected: boolean
 }
 
 export interface IndividualWorkProps {
-	"_id": string
+	"_id": number
 	picture: StaticImageData
 	work: string
 	body: string

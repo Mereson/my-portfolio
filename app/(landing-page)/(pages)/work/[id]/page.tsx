@@ -8,14 +8,14 @@ const WorkPage = () => {
 	const params = useParams()
 	const id = params?.id as string
 
-	const workDisplay = individualWork.find((workId) => workId._id === id)
+	const workDisplay = individualWork.find(
+		(workId) => workId._id.toString() === id
+	)
 
 	if (!workDisplay) return <p>Hi there</p>
 
 	return (
-		<section
-			className={`bg-white p-20`}
-		>
+		<section className={`bg-white p-20`}>
 			<figure className=" rounded-4xl">
 				<Image
 					src={workDisplay.picture}

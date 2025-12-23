@@ -62,7 +62,9 @@ export const AboutMe = () => {
 					</Typography>
 				</article>
 				<Image
-					src={picture}
+					src={picture} 
+					width={408}
+					height={408}
 					className="size-102 rounded-3xl shadow-lg"
 					alt="My Picture"
 				/>

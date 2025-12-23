@@ -1,9 +1,12 @@
 import { Typography } from "@/ui"
-import { selectedWorksList, services } from "@/utils"
+import { worksList, services } from "@/utils"
 import { SelectedWorksCard, ServicesCard } from "../components"
 import Link from "next/link"
+import { Routes } from "@/routes"
 
 export const SelectedWorks = () => {
+	const selectedWorksList = worksList.filter((list) => list.selected)
+
 	return (
 		<section
 			id="selected-works"
@@ -43,7 +46,7 @@ export const SelectedWorks = () => {
 					))}
 				</div>
 				<div className="w-full grid place-content-center">
-					<Link href={""} className=" w-fit flex">
+					<Link href={Routes.ALL_WORKS} className=" w-fit flex">
 						<Typography
 							variant="h6"
 							fontWeight="bold"

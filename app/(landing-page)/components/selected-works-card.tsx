@@ -3,13 +3,13 @@ import Image from "next/image"
 import clsx from "clsx"
 import { Typography } from "@/ui"
 import Link from "next/link"
-import { SelectedWorksProps } from "@/utils"
+import { WorksProps } from "@/utils"
 import { Routes } from "@/routes"
 
 export const SelectedWorksCard = ({
 	selectedWork,
 }: {
-	selectedWork: SelectedWorksProps
+	selectedWork: WorksProps
 }) => {
 	const { _id, picture, work } = selectedWork
 
@@ -17,6 +17,8 @@ export const SelectedWorksCard = ({
 		<figure className="w-171 relative rounded-4xl">
 			<Image
 				src={picture}
+				height={383}
+				width={684}
 				className="size-fit rounded-4xl shadow-lg bg-[#00000062]"
 				alt="work"
 			/>
