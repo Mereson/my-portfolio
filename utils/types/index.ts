@@ -7,7 +7,14 @@ export interface ServicesProps {
 }
 
 export interface SelectedWorksProps {
+	"_id": string
 	picture: StaticImageData
-	href: string
 	work: string
+}
+
+export interface IndividualWorkProps {
+	"_id": string
+	picture: StaticImageData
+	work: string
+	body: string
 }

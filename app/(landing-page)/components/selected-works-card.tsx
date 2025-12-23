@@ -4,21 +4,24 @@ import clsx from "clsx"
 import { Typography } from "@/ui"
 import Link from "next/link"
 import { SelectedWorksProps } from "@/utils"
+import { Routes } from "@/routes"
 
 export const SelectedWorksCard = ({
 	selectedWork,
 }: {
 	selectedWork: SelectedWorksProps
 }) => {
+	const { _id, picture, work } = selectedWork
+
 	return (
 		<figure className="w-171 relative rounded-4xl">
 			<Image
-				src={selectedWork.picture}
+				src={picture}
 				className="size-fit rounded-4xl shadow-lg bg-[#00000062]"
 				alt="work"
 			/>
 			<Link
-				href={selectedWork.href}
+				href={`${Routes.WORK}/${_id}`}
 				className={clsx(
 					"rounded-full bg-[#444141] border-2 border-[#444141] hover:border-[#E7A03A] w-fit p-1.5",
 					"transition-all ease-in-out duration-150 cursor-pointer rotate-230 ",
@@ -40,7 +43,7 @@ export const SelectedWorksCard = ({
 					"absolute bottom-[32px]"
 				)}
 			>
-				{selectedWork.work}
+				{work}
 			</Typography>
 		</figure>
 	)

@@ -1,8 +1,7 @@
 "use client"
 import { Typography } from "@/ui"
 import { useEffect, useRef } from "react"
-import My_Picture from "@/public/assets/images/Chimere_Ojinta.jpg"
-import { handleParallaxScroll, onServicesCardScroll } from "@/utils"
+import { aboutMe, handleParallaxScroll, onServicesCardScroll } from "@/utils"
 import { Hilly } from "@/public"
 import Image from "next/image"
 
@@ -11,6 +10,8 @@ const rtMultiplier = 1.7
 
 export const AboutMe = () => {
 	const sectionRef = useRef<HTMLElement>(null)
+
+	const { myName, body, picture } = aboutMe
 
 	useEffect(() => {
 		const section = sectionRef.current
@@ -50,22 +51,18 @@ export const AboutMe = () => {
 						font="genos"
 						customClassName="about-me-text text-[55px]"
 					>
-						Chimere Ojinta
+						{myName}
 					</Typography>
 					<Typography
 						variant="body-l"
 						color="white"
-						customClassName="about-me-text leading-[150%] max-w-[560px]"
+						customClassName="about-me-text leading-[160%] max-w-[640px] text-justify! whitespace-pre-line"
 					>
-						Hi, I&apos;m Chimere Ojinta - a freelancer specializing in premium
-						web design, development, and SEO services. I&apos;m passionate about
-						creating unique and effective solutions for my clients, and I bring
-						a personal touch to every project. Let&apos;s work together to bring
-						your vision to life!
+						{body}
 					</Typography>
 				</article>
 				<Image
-					src={My_Picture}
+					src={picture}
 					className="size-102 rounded-3xl shadow-lg"
 					alt="My Picture"
 				/>

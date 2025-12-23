@@ -132,3 +132,12 @@ body {
 
 	background: linear-gradient(to bottom, #161616 0%, transparent 60%);
 }
+
+.work-bg {
+	background-color: #161616;
+	transition: background-color 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-bg.is-visible {
+	background-color: #ffffff;
+}

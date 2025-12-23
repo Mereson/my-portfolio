@@ -2,48 +2,82 @@ import ECH_Work from "@/public/assets/images/ech_landing.png"
 import ECH_Students from "@/public/assets/images/ech_students_dashboard.png"
 import Serlzo from "@/public/assets/images/serlzo.png"
 import DigiTeach from "@/public/assets/images/digi_teach_africa.png"
-import { SelectedWorksProps, ServicesProps } from "./types"
+import My_Picture from "@/public/assets/images/Chimere_Ojinta.jpg"
+import { IndividualWorkProps, SelectedWorksProps, ServicesProps } from "./types"
 
 export const services: ServicesProps[] = [
 	{
 		servicesId: 1,
 		text: "Front-end",
 		subtext:
-			"Visually stunning web designs that captivate your audience by blending your brand voice and customer needs.",
+			"I bring designs to life, turning them into responsive, polished interfaces people enjoy using.",
 	},
 	{
 		servicesId: 2,
 		text: "Back-end",
 		subtext:
-			"Get custom web development solutions that are tailored to your specifications, designed to deliver a flawless user experience.",
+			"I design and connect the systems behind the scenes that keep your product fast, secure, and dependable.",
 	},
 	{
 		servicesId: 3,
 		text: "Community",
 		subtext:
-			"Proven SEO strategies that enhance your online performance, bringing you to the forefront of organic search results.",
+			"I believe in giving back by supporting communities, sharing knowledge, and helping others grow.",
 	},
 ]
 
 export const selectedWorksList: SelectedWorksProps[] = [
 	{
+		_id: "1",
 		picture: ECH_Work,
-		href: "#",
 		work: "ECH Landing Page",
 	},
 	{
+		_id: "2",
 		picture: ECH_Students,
-		href: "#",
 		work: "ECH Students Dashboard",
 	},
 	{
+		_id: "3",
 		picture: Serlzo,
-		href: "#",
 		work: "Serlzo",
 	},
 	{
+		_id: "4",
 		picture: DigiTeach,
-		href: "#",
 		work: "Digi Teach Africa",
 	},
 ]
+
+export const individualWork: IndividualWorkProps[] = [
+	{
+		_id: "1",
+		picture: ECH_Work,
+		work: "ECH Landing Page",
+		body: ""
+	},
+	{
+		_id: "2",
+		picture: ECH_Students,
+		work: "ECH Students Dashboard",
+		body: ""
+	},
+	{
+		_id: "3",
+		picture: Serlzo,
+		work: "Serlzo",
+		body: ""
+	},
+	{
+		_id: "4",
+		picture: DigiTeach,
+		work: "Digi Teach Africa",
+		body: ""
+	},
+]
+
+export const aboutMe = {
+	picture: My_Picture,
+	myName: "Chimere Ojinta",
+	body: "Hi, I'm Chimere Ojinta — a full-stack developer with a strong interest in business and community building. I enjoy building products that solve real problems for real people. With a first-class degree in Computer Science, I'm driven by continuous learning and a commitment to excellence, always aiming to deliver thoughtful, world-class solutions. Feel free to reach out if you'd like to build something meaningful together.",
+}

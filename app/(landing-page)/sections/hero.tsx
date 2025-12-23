@@ -66,7 +66,7 @@ export const Hero = () => {
 					align="center"
 					customClassName="max-w-150 leading-[150%]! z-10!"
 				>
-					Premium web design, development, and SEO services to help your
+					Premium web development services to help your
 					business stand out.
 				</Typography>
 				<div className="parallax-cta-hero ">

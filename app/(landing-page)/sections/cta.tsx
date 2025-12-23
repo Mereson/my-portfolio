@@ -4,6 +4,8 @@ import { Typography } from "@/ui"
 import { handleParallaxScroll } from "@/utils"
 import Image from "next/image"
 import Stars from "@/public/assets/svgs/stars-cta.svg"
+import Linkedin from "@/public/assets/svgs/linkedin.svg"
+import Instagram from "@/public/assets/svgs/instagram.svg"
 import { useEffect, useRef } from "react"
 import clsx from "clsx"
 import Link from "next/link"
@@ -79,8 +81,20 @@ export const CTA = () => {
 					Or connect with me on social media
 				</Typography>
 				<figure className="flex gap-6">
-					<div className="size-10 rounded-lg bg-gray-300"></div>
-					<div className="size-10 rounded-lg bg-gray-300"></div>
+					<Link
+						target="_blank"
+						href={"https://www.linkedin.com/in/chimeremnma-ojinta/"}
+						className="size-10 p-1 rounded-lg bg-white cursor-pointer"
+					>
+						<Image src={Linkedin} className="size-full" alt="Linkedin" />
+					</Link>
+					<Link
+						target="_blank"
+						href={"https://www.instagram.com/awesome_ojinta/"}
+						className="size-10 p-1 pb-[2px] pr-[3px] flex items-center justify-center rounded-lg bg-white cursor-pointer"
+					>
+						<Image src={Instagram} className="size-full " alt="Instagram" />
+					</Link>
 				</figure>
 			</div>
 		</section>
