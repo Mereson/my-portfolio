@@ -1,25 +1,12 @@
 "use client"
-
 import { Typography } from "@/ui"
 import { individualWork } from "@/utils"
-import clsx from "clsx"
 import Image from "next/image"
 import { useParams } from "next/navigation"
-import { useEffect, useState } from "react"
 
 const WorkPage = () => {
 	const params = useParams()
 	const id = params?.id as string
-
-	const [visible, setVisible] = useState(false)
-
-	useEffect(() => {
-		const setVisiblity = () => {
-			setVisible(true)
-		}
-
-		setVisiblity()
-	}, [])
 
 	const workDisplay = individualWork.find((workId) => workId._id === id)
 
