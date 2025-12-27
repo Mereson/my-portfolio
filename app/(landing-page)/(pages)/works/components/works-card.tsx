@@ -1,26 +1,27 @@
 import { Routes } from "@/routes"
 import { Typography } from "@/ui"
-import { WorksProps } from "@/utils"
+import { AllWorksType } from "@/utils"
 import clsx from "clsx"
 import Image from "next/image"
 import Link from "next/link"
 
-export const WorksCard = ({ works }: { works: WorksProps }) => {
+export const WorksCard = ({ works }: { works: AllWorksType }) => {
 	return (
 		<Link
-			href={`${Routes.WORK}/${works._id}`}
+			href={`${Routes.WORK}/${works.slug}`}
 			className={clsx(
-				"border-y-2 col-span-1 border-[#6f6e6e]  flex items-center gap-10 p-4",
+				"border-y-2 col-span-1 border-[#6f6e6e]  flex items-center gap-7 p-4",
 				"hover:shadow-sm shadow-white duration-200 transition-all ease-in-out",
-				works._id % 2 === 0
-					? "rounded-l-3xl border-l-2 pl-4"
-					: "rounded-r-3xl border-r-2 pl-0"
+
+				"rounded-3xl border-2 px-5"
 			)}
 		>
 			<figure className=" w-60">
 				<Image
-					src={works.picture}
-					className="rounded-2xl h-full"
+					src={works.pictureURL}
+					width={240}
+					height={135}
+					className="rounded-xl h-full"
 					alt="work image"
 				/>
 			</figure>

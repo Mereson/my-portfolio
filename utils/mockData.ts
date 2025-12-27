@@ -3,7 +3,7 @@ import ECH_Students from "@/public/assets/images/ech_students_dashboard.png"
 import Serlzo from "@/public/assets/images/serlzo.png"
 import DigiTeach from "@/public/assets/images/digi_teach_africa.png"
 import My_Picture from "@/public/assets/images/Chimere_Ojinta.jpg"
-import { IndividualWorkProps, WorksProps, ServicesProps } from "./types"
+import { IndividualWorkProps, ServicesProps } from "./types"
 
 export const services: ServicesProps[] = [
 	{
@@ -26,65 +26,65 @@ export const services: ServicesProps[] = [
 	},
 ]
 
-export const worksList: WorksProps[] = [
-	{
-		_id: 1,
-		picture: ECH_Work,
-		work: "ECH Landing Page",
-		selected: true,
-	},
-	{
-		_id: 2,
-		picture: ECH_Students,
-		work: "ECH Students Dashboard",
-		selected: true,
-	},
-	{
-		_id: 3,
-		picture: "https://res.cloudinary.com/deqswfdbf/image/upload/v1766518555/ech_landing_xvd90c.png",
-		work: "Serlzo",
-		selected: true,
-	},
-	{
-		_id: 4,
-		picture: DigiTeach,
-		work: "Digi Teach Africa",
-		selected: true,
-	},
-	{
-		_id: 5,
-		picture: DigiTeach,
-		work: "Digi Teach Africa",
-		selected: false,
-	},
-]
+// export const worksList: WorksProps[] = [
+// 	{
+// 		_id: 1,
+// 		picture: ECH_Work,
+// 		work: "ECH Landing Page",
+// 		selected: true,
+// 	},
+// 	{
+// 		_id: 2,
+// 		picture: ECH_Students,
+// 		work: "ECH Students Dashboard",
+// 		selected: true,
+// 	},
+// 	{
+// 		_id: 3,
+// 		picture: Serlzo,
+// 		work: "Serlzo",
+// 		selected: true,
+// 	},
+// 	{
+// 		_id: 4,
+// 		picture: DigiTeach,
+// 		work: "Digi Teach Africa",
+// 		selected: true,
+// 	},
+// 	{
+// 		_id: 5,
+// 		picture: DigiTeach,
+// 		work: "Digi Teach Africa",
+// 		selected: false,
+// 	},
+// ]
 
-export const individualWork: IndividualWorkProps[] = [
-	{
-		_id: 1,
-		picture: ECH_Work,
-		work: "ECH Landing Page",
-		body: "",
-	},
-	{
-		_id: 2,
-		picture: ECH_Students,
-		work: "ECH Students Dashboard",
-		body: "",
-	},
-	{
-		_id: 3,
-		picture: Serlzo,
-		work: "Serlzo",
-		body: "",
-	},
-	{
-		_id: 4,
-		picture: DigiTeach,
-		work: "Digi Teach Africa",
-		body: "",
-	},
-]
+// export const individualWork: IndividualWorkProps[] = [
+// 	{
+// 		_id: 1,
+// 		pictureURL: ECH_Work,
+// 		work: "ECH Landing Page",
+// 		body: "",
+// 	},
+// 	{
+// 		_id: 2,
+// 		pictureURL: ECH_Students,
+// 		work: "ECH Students Dashboard",
+// 		body: "",
+// 	},
+// 	{
+// 		_id: 3,
+// 		pictureURL: Serlzo,
+// 		work: "Serlzo",
+// 		body: "",
+// 	},
+// 	{
+// 		_id: 4,
+// 		pictureURL: DigiTeach,
+// 		work: "Digi Teach Africa",
+// 		body: "",
+// 	},
+// ]
 
 export const aboutMe = {
 	picture: My_Picture,
