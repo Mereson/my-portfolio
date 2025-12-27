@@ -3,7 +3,7 @@ import ECH_Students from "@/public/assets/images/ech_students_dashboard.png"
 import Serlzo from "@/public/assets/images/serlzo.png"
 import DigiTeach from "@/public/assets/images/digi_teach_africa.png"
 import My_Picture from "@/public/assets/images/Chimere_Ojinta.jpg"
-import { IndividualWorkProps, ServicesProps } from "./types"
+import { ServicesProps } from "./types"
 
 export const services: ServicesProps[] = [
 	{
