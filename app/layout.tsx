@@ -1,10 +1,17 @@
 import type { Metadata } from "next"
 import "@/styles/globals.css"
 import { genos, nunito, outfit } from "@/styles/font"
+import Providers from "./providers"
 
 export const metadata: Metadata = {
 	title: "Chimere's Portfolio",
 	description: "The portfolio for Chimeremnma Ojinta ",
+	icons: [
+		{
+			rel: "icon",
+			url: "/favicon1.ico",
+		},
+	],
 }
 
 export default function RootLayout({
@@ -15,7 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${nunito} ${outfit} ${genos} text- antialiased`}>
-				{children}
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	)

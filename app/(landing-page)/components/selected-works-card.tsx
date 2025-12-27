@@ -3,25 +3,27 @@ import Image from "next/image"
 import clsx from "clsx"
 import { Typography } from "@/ui"
 import Link from "next/link"
-import { SelectedWorksProps } from "@/utils"
 import { Routes } from "@/routes"
+import { SelectedWorksType } from "@/utils"
 
 export const SelectedWorksCard = ({
 	selectedWork,
 }: {
-	selectedWork: SelectedWorksProps
+	selectedWork: SelectedWorksType
 }) => {
-	const { _id, picture, work } = selectedWork
+	const { pictureURL, work, slug } = selectedWork
 
 	return (
 		<figure className="w-171 relative rounded-4xl">
 			<Image
-				src={picture}
+				src={pictureURL}
+				height={383}
+				width={684}
 				className="size-fit rounded-4xl shadow-lg bg-[#00000062]"
 				alt="work"
 			/>
 			<Link
-				href={`${Routes.WORK}/${_id}`}
+				href={`${Routes.WORK}/${slug}`}
 				className={clsx(
 					"rounded-full bg-[#444141] border-2 border-[#444141] hover:border-[#E7A03A] w-fit p-1.5",
 					"transition-all ease-in-out duration-150 cursor-pointer rotate-230 ",

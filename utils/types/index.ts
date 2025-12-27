@@ -6,15 +6,26 @@ export interface ServicesProps {
 	subtext: string
 }
 
-export interface SelectedWorksProps {
-	"_id": string
-	picture: StaticImageData
+export interface SelectedWorksType {
+	_id: number
+	pictureURL: string
 	work: string
+	selected: boolean
+	slug: string
+}
+
+export interface AllWorksType {
+	_id: number
+	pictureURL: string
+	work: string
+	slug: string
 }
 
 export interface IndividualWorkProps {
-	"_id": string
-	picture: StaticImageData
+	_id: number
+	pictureURL: string | StaticImageData
 	work: string
+	link: string
+	slug: string
 	body: string
 }

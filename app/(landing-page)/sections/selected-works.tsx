@@ -1,9 +1,18 @@
+"use client"
 import { Typography } from "@/ui"
-import { selectedWorksList, services } from "@/utils"
+import { SelectedWorksType, services} from "@/utils"
 import { SelectedWorksCard, ServicesCard } from "../components"
 import Link from "next/link"
+import { Routes } from "@/routes"
+import { useGetSelectedWorks } from "@/lib/app"
 
 export const SelectedWorks = () => {
+	const { data, isLoading } = useGetSelectedWorks()
+
+	const worksList: SelectedWorksType[] = data?.data ? data.data : []
+
+	console.log(worksList)
+
 	return (
 		<section
 			id="selected-works"
@@ -38,12 +47,15 @@ export const SelectedWorks = () => {
 					</Typography>
 				</div>
 				<div className="grid grid-cols-2 gap-8 ">
-					{selectedWorksList.map((selectedWork, i) => (
-						<SelectedWorksCard key={i} selectedWork={selectedWork} />
+					{worksList.map((selectedWork) => (
+						<SelectedWorksCard
+							key={selectedWork._id}
+							selectedWork={selectedWork}
+						/>
 					))}
 				</div>
 				<div className="w-full grid place-content-center">
-					<Link href={""} className=" w-fit flex">
+					<Link href={Routes.ALL_WORKS} className=" w-fit flex">
 						<Typography
 							variant="h6"
 							fontWeight="bold"
