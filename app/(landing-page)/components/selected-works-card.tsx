@@ -14,7 +14,7 @@ export const SelectedWorksCard = ({
 	const { pictureURL, work, slug } = selectedWork
 
 	return (
-		<figure className="w-171 relative rounded-4xl">
+		<figure className="w-171 h-[23.971rem] relative rounded-4xl">
 			<Image
 				src={pictureURL}
 				height={383}
