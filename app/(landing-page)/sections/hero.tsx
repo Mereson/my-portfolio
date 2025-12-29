@@ -8,7 +8,6 @@ import Stars from "@/public/assets/svgs/stars.svg"
 import { useEffect, useRef, useState } from "react"
 import { handleParallaxScroll, setTextTyperObserver } from "@/utils"
 import clsx from "clsx"
-import { useMediaQuery } from "usehooks-ts"
 
 export const Hero = () => {
 	const [showTypedText, setShowTypedText] = useState(false)
