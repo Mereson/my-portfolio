@@ -7,6 +7,8 @@ import SysyemImage from "@/public/assets/images/system.png"
 import Stars from "@/public/assets/svgs/stars.svg"
 import { useEffect, useRef, useState } from "react"
 import { handleParallaxScroll, setTextTyperObserver } from "@/utils"
+import clsx from "clsx"
+import { useMediaQuery } from "usehooks-ts"
 
 export const Hero = () => {
 	const [showTypedText, setShowTypedText] = useState(false)
@@ -30,17 +32,25 @@ export const Hero = () => {
 	}, [])
 
 	return (
-		<section ref={sectionRef} className=" grid gap-8 mb-38 relative">
-			<figure className="flex justify-end">
+		<section
+			ref={sectionRef}
+			className="grid gap-8 sm:mb-38 relative overflow-hidden"
+		>
+			<figure className="hidden sm:flex justify-end">
 				<Image
 					src={SysyemImage}
-					className=" h-[50.379rem] w-[40.35rem]  left-0 parallax-image-hero"
+					className="h-[50.379rem] w-[40.35rem] left-0 parallax-image-hero"
 					alt="My picture"
 				/>
 			</figure>
+
 			<Image src={Stars} className="absolute" alt="stars" />
-			<FloatingStars num={1} />
-			<div className="grid gap-4 absolute place-items-center left-10 bottom-[35%] parallax-text-hero">
+			<div
+				className={clsx(
+					"grid gap-4 sm:absolute  place-items-center left-10 bottom-[35%] parallax-text-hero",
+					"mt-35 sm:mt-0"
+				)}
+			>
 				<Typography
 					variant="h1"
 					fontWeight="semi-bold"
@@ -51,8 +61,8 @@ export const Hero = () => {
 					Chimere&nbsp;
 					{showTypedText && (
 						<>
-							<span className="awesome-wrapper">
-								<span className="awesome">Awesome</span>
+							<span className="max-sm:hidden! awesome-wrapper">
+								<span className="max-sm:hidden! awesome">Awesome</span>
 							</span>
 						</>
 					)}
@@ -64,15 +74,27 @@ export const Hero = () => {
 					fontWeight="light"
 					color="white"
 					align="center"
-					customClassName="max-w-150 leading-[150%]! z-10!"
+					customClassName="max-w-150 w-80 sm:w-full leading-[150%]! z-10!"
 				>
-					Premium web development services to help your
-					business stand out.
+					Premium web development services to help your business stand out.
 				</Typography>
 				<div className="parallax-cta-hero ">
 					<ShowWorks />
 				</div>
 			</div>
+			<FloatingStars num={1} />
+
+			<figure className="flex sm:hidden justify-end">
+				<Image
+					src={SysyemImage}
+					className={clsx("h-70! w-50! top-[-80] left-10 ", "relative ")}
+					width={200}
+					height={280}
+					alt="My picture"
+				/>
+			</figure>
+
+			<Image src={Stars} className="absolute bottom-[30px]" alt="stars" />
 		</section>
 	)
 }

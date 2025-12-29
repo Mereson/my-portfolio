@@ -7,6 +7,7 @@ import { Routes } from "@/routes"
 import { useGetSelectedWorks } from "@/lib/app"
 
 export const SelectedWorks = () => {
+	
 	const { data, isLoading } = useGetSelectedWorks()
 
 	const worksList: SelectedWorksType[] = data?.data ? data.data : []
@@ -14,14 +15,14 @@ export const SelectedWorks = () => {
 	return (
 		<section
 			id="selected-works"
-			className="pt-[0.813rem] pb-20 relative max-w-[1400px] mx-auto"
+			className=" pt-8 sm:pt-[0.813rem] pb-20 relative max-w-[1400px] mx-auto"
 		>
-			<div className="grid grid-cols-3 gap-8">
+			<div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-8 mx-10">
 				{services.map((service, i) => (
 					<ServicesCard key={i} services={service} />
 				))}
 			</div>
-			<section id="selected-section" className="mt-40 grid gap-8">
+			<section id="selected-section" className="mt-30 sm:mt-40 grid gap-8">
 				<div className="flex items-baseline gap-2 ml-8">
 					<Typography
 						tag="h1"
@@ -29,7 +30,7 @@ export const SelectedWorks = () => {
 						font="genos"
 						color="secondary"
 						fontWeight="light"
-						customClassName="leading-[110%]"
+						customClassName="leading-[110%] max-sm:text-4xl!"
 					>
 						Selected
 					</Typography>
@@ -39,21 +40,21 @@ export const SelectedWorks = () => {
 						font="outfit"
 						color="secondary"
 						fontWeight="light"
-						customClassName="leading-[110%]"
+						customClassName="leading-[110%] max-sm:text-4xl!"
 					>
 						Works
 					</Typography>
 				</div>
-				<div className="grid grid-cols-2 gap-8 ">
+				<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-6">
 					{isLoading
 						? Array(4)
 								.fill(null)
 								.map((_, i) => (
 									<div
 										key={i}
-										className="w-171 h-[23.971rem] rounded-4xl border border-[#6f6e6e]"
+										className="w-full sm:w-171 h-53 sm:h-[23.971rem] col-span-1 rounded-2xl sm:rounded-4xl border border-[#6f6e6e]"
 									>
-										<SkeletonLoader customClassName="w-171 h-[23.971rem] rounded-4xl!" />
+										<SkeletonLoader customClassName="w-full sm:w-171 h-53 sm:h-[23.971rem] rounded-2xl sm:rounded-4xl!" />
 									</div>
 								))
 						: worksList.map((selectedWork) => (
@@ -74,7 +75,7 @@ export const SelectedWorks = () => {
 								color="white"
 								customClassName="hover:text-[#E7A03A]! transition-colors duration-200 ease-in-out"
 							>
-								See More
+								See All
 							</Typography>
 						</Link>
 					)}

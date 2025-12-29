@@ -29,17 +29,17 @@ export const CTA = () => {
 	return (
 		<section
 			id="contact"
-			className="h-screen relative overflow-hidden grid bg-[#220F40] w-full place-content-center "
+			className="py-15 sm:h-screen relative overflow-hidden grid bg-[#220F40] w-full place-content-center "
 		>
 			<Image
 				src={Stars}
-				className="absolute top-0 rotate-180 z-1 w-full"
+				className="absolute top-7 sm:top-0 rotate-180 z-1 w-full"
 				alt="stars"
 			/>
 			<div className="z-1">
 				<FloatingStars num={1} />
 			</div>
-			<div className="grid place-items-center gap-8">
+			<div className="grid place-items-center gap-4 sm:gap-8">
 				<Typography
 					variant="title-l"
 					font="genos"
@@ -66,7 +66,7 @@ export const CTA = () => {
 					</Typography>
 				</Link>
 			</div>
-			<div className="grid place-items-center w-full mt-10 mb-6">
+			<div className="grid place-items-center w-full mt-5 mb-3 sm:mt-10 sm:mb-6">
 				<hr className="border-[#f4f4f4] w-[15%] z-1" />
 			</div>
 			<div className="grid place-items-center gap-7 py-4 bg-[#220F40] z-4">
@@ -80,18 +80,18 @@ export const CTA = () => {
 				>
 					Or connect with me on social media
 				</Typography>
-				<figure className="flex gap-6">
+				<figure className="flex gap-4 sm:gap-6">
 					<Link
 						target="_blank"
 						href={"https://www.linkedin.com/in/chimeremnma-ojinta/"}
-						className="size-10 p-1 rounded-lg bg-white cursor-pointer"
+						className="size-5 sm:size-10 p-1 rounded-sm sm:rounded-lg bg-white cursor-pointer"
 					>
 						<Image src={Linkedin} className="size-full" alt="Linkedin" />
 					</Link>
 					<Link
 						target="_blank"
 						href={"https://www.instagram.com/awesome_ojinta/"}
-						className="size-10 p-1 pb-[2px] pr-[3px] flex items-center justify-center rounded-lg bg-white cursor-pointer"
+						className="size-5 sm:size-10 p-1 pb-[2px] pr-[3px] flex items-center justify-center rounded-sm sm:rounded-lg bg-white cursor-pointer"
 					>
 						<Image src={Instagram} className="size-full " alt="Instagram" />
 					</Link>

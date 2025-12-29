@@ -8,6 +8,7 @@ export default function Home() {
 			<SelectedWorks />
 			<AboutMe />
 			<CTA />
+			<div className="max-[420px]:block hidden"></div>
 		</>
 	)
 }
