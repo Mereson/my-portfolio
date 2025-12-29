@@ -4,11 +4,13 @@ import { Typography } from "@/ui"
 import { onServicesCardScroll, ServicesProps } from "@/utils"
 import clsx from "clsx"
 import { useEffect, useRef } from "react"
+import { useMediaQuery } from "usehooks-ts"
 
 const vhMultiplier = 0.3
 const rtMultiplier = 1.3
 
 export const ServicesCard = ({ services }: { services: ServicesProps }) => {
+	const smallScreen = useMediaQuery("(max-width: 425px)")
 	const cardRef = useRef<HTMLElement>(null)
 
 	useEffect(() => {
@@ -26,16 +28,18 @@ export const ServicesCard = ({ services }: { services: ServicesProps }) => {
 	return (
 		<section
 			ref={cardRef}
-			className=" relative overflow-hidden bg-white p-12 col-span-1"
+			className=" relative overflow-hidden bg-white p-7 sm:p-12 col-span-1"
 		>
-			<div
-				className={clsx(
-					"service-card__reveal absolute inset-0  bg-[#dc9839dc] ",
-					"transition-transform duration-150 ease-linear"
-				)}
-			>
-				<ServicesCardWaves />
-			</div>
+			{!smallScreen && (
+				<div
+					className={clsx(
+						"service-card__reveal absolute inset-0  bg-[#dc9839dc] ",
+						"transition-transform duration-150 ease-linear"
+					)}
+				>
+					<ServicesCardWaves />
+				</div>
+			)}
 			<article className="grid gap-2 relative z-1 ">
 				<Typography
 					variant="h4"

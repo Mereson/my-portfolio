@@ -4,8 +4,8 @@ import { scrollIntoView } from "@/utils"
 
 export const Navbar = () => {
 	return (
-		<section className="w-full absolute top-5 grid place-items-center">
-			<nav className="px-6 py-5 z-10 bg-[#dac5a70d] rounded-sm">
+		<section className="w-full absolute top-5 grid place-items-center ">
+			<nav className="p-4 sm:px-6 sm:py-5 z-10 bg-[#dac5a70d] rounded-sm">
 				<Typography
 					tag="ul"
 					fontWeight="semi-bold"

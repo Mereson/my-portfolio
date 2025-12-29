@@ -6,22 +6,22 @@ import { nunito, outfit, genos } from "@/styles/font"
 const typography = cva("", {
 	variants: {
 		intent: {
-			"title-xl": "text-[10rem]", // 160px
-			"title-l": "text-9xl", // 128px
-			"title-m": "text-[6rem]", // 96px
-			"title-s": "text-[5rem]", // 80px
-			h1: "text-[4rem]", // 64px
-			h2: "text-5xl", // 48px
-			h3: "text-[2rem]", // 32px
-			h4: "text-2xl", // 24px
-			h5: "text-xl", // 20px
-			h6: "text-lg", // 18px
-			"body-xl": "text-2xl", // 24px
-			"body-l": "text-xl", // 20px
-			"body-m": "text-lg", // 18px
-			"body-r": "text-base", // 16px
-			"body-s": "text-sm", // 14px
-			"body-xs": "text-xs", // 12px
+			"title-xl": "xl:text-[10rem] lg:text-9xl md:text-[6rem] sm:text-[5rem] text-[4rem]", // 160px
+			"title-l": "xl:text-9xl lg:text-[6rem] md:text-[5rem] sm:text-[4rem] text-5xl", // 128px
+			"title-m": "xl:text-[6rem] lg:text-[5rem] md:text-[4rem] sm:text-5xl text-[2rem]", // 96px
+			"title-s": "xl:text-[5rem] lg:text-[4rem] md:text-5xl sm:text-[2rem] text-2xl", // 80px
+			h1: "xl:text-[4rem] text-5xl ", // 64px
+			h2: "xl:text-5xl lg:text-[2rem] md:text-2xl sm:text-xl text-lg", // 48px
+			h3: "xl:text-[2rem] lg:text-2xl md:text-xl sm:text-lg text-base", // 32px
+			h4: "xl:text-2xl lg:text-xl md:text-lg sm:text-base text-sm", // 24px
+			h5: "xl:text-xl lg:text-[6rem] md:text-[5rem] sm:text-[4rem] text-5xl", // 20px
+			h6: "xl:text-lg lg:text-base text-sm", // 18px
+			"body-xl": "xl:text-2xl lg:text-xl md:text-lg sm:text-base text-sm", // 24px
+			"body-l": "xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs", // 20px
+			"body-m": "xl:text-lg lg:text-base md:text-sm text-xs ", // 18px
+			"body-r": "xl:text-base lg:text-sm text-xs", // 16px
+			"body-s": "xl:text-sm text-xs ", // 14px
+			"body-xs": "xl:text-xs lg:text-[6rem] md:text-[5rem] sm:text-[4rem] text-5xl", // 12px
 		},
 		color: {
 			primary: "text-[#0E0E0E]",

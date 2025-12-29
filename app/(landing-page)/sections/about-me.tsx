@@ -37,39 +37,47 @@ export const AboutMe = () => {
 		<section
 			id="about-me"
 			ref={sectionRef}
-			className="grid overflow-hidden relative w-screen pt-[12.313rem] about-me-bg"
+			className="grid overflow-hidden relative w-screen pt-28 sm:pt-[12.313rem] max-w-[1600px] about-me-bg"
 		>
 			<div className="section-blend"></div>
 			<section
 				id="about-me"
-				className="flex items-center justify-center gap-20"
+				className="flex flex-col-reverse sm:flex-row items-center justify-center gap-10 sm:gap-20"
 			>
-				<article className="grid gap-3">
+				<article className="grid gap-3 mx-9">
 					<Typography
 						variant="h1"
 						fontWeight="semi-bold"
 						font="genos"
-						customClassName="about-me-text text-[55px]"
+						customClassName="about-me-text xl:text-[55px]! text-[30px]"
 					>
 						{myName}
 					</Typography>
 					<Typography
 						variant="body-l"
 						color="white"
-						customClassName="about-me-text leading-[160%] max-w-[640px] text-justify! whitespace-pre-line"
+						customClassName="about-me-text leading-[160%] sm:w-full max-w-[640px] text-justify! whitespace-pre-line"
 					>
 						{body}
 					</Typography>
 				</article>
 				<Image
-					src={picture} 
+					src={picture}
 					width={408}
 					height={408}
-					className="size-102 rounded-3xl shadow-lg"
+					className="size-52 sm:size-102 rounded-3xl shadow-lg"
 					alt="My Picture"
 				/>
 			</section>
-			<Hilly />
+			<div className=" grid place-items-center">
+				<Hilly />
+			</div>
+
+			{/* <Image
+					src={Hillz}
+					className="w-full absolute"
+					alt="My Picture"
+				/> */}
 		</section>
 	)
 }

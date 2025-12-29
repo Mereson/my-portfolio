@@ -19,7 +19,7 @@ export const ShowWorks = () => {
 				<Image src={ArrowDown} alt="arrow down" />
 			</div>
 			<Typography variant="body-s" color="secondary">
-Srcoll Down
+Scroll Down
 			</Typography>
 		</div>
 	)

@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${nunito} ${outfit} ${genos} text- antialiased`}>
+			<body className={`${nunito} ${outfit} ${genos} text-antialiased`}>
 				<Providers>{children}</Providers>
 			</body>
 		</html>
