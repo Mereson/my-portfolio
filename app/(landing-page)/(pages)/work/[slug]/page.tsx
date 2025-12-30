@@ -18,7 +18,7 @@ const WorkPage = () => {
 	const work: IndividualWorkProps = data?.data ? data.data : {}
 
 	return (
-		<section className="bg-white py-10 px-5 sm:p-18">
+		<section className="bg-white min-h-screen overflow-auto py-10 px-5 lg:p-18">
 			<div
 				onClick={() => navigate.back()}
 				className="w-full mb-3 cursor-pointer"
@@ -26,7 +26,9 @@ const WorkPage = () => {
 				<Image
 					src={ArrowLeft}
 					height={30}
-					className="h-[40px]"
+					width={30}
+					loading="eager"
+					className="h-[40px] w-[30px]"
 					alt="arrow left"
 				/>
 			</div>
@@ -34,7 +36,7 @@ const WorkPage = () => {
 			{isLoading ? (
 				<SkeletonLoader
 					variant="solid"
-					customClassName="w-[24.063rem] sm:w-7xl h-70 sm:h-[45.223rem] rounded-4xl shadow-lg"
+					customClassName="w-full lg:w-7xl h-70 sm:h-[45.223rem] rounded-4xl shadow-lg"
 				/>
 			) : (
 				<figure className="rounded-4xl">
@@ -42,7 +44,7 @@ const WorkPage = () => {
 						src={work.pictureURL}
 						width={1280}
 						height={723}
-						className="w-[24.063rem] sm:w-7xl h-70 sm:h-[45.223rem] rounded-4xl shadow-lg bg-[#00000062]"
+						className="w-full h-70 sm:h-[45.223rem] rounded-4xl shadow-lg bg-[#00000062]"
 						alt="work"
 					/>
 				</figure>
@@ -52,7 +54,7 @@ const WorkPage = () => {
 				<article className="m-4 sm:m-8 mt-6 sm:mt-12 grid gap-3">
 					<SkeletonLoader
 						variant="solid"
-						customClassName="w-40! sm:w-xl h-[1.2rem] sm:h-[2.4rem] mb-2 rounded-lg"
+						customClassName="w-40! lg:w-xl h-[1.2rem] sm:h-[2.4rem] mb-2 rounded-lg"
 					/>
 					<div className="grid gap-2">
 						<SkeletonLoader

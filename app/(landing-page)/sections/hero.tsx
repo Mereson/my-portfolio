@@ -8,11 +8,13 @@ import Stars from "@/public/assets/svgs/stars.svg"
 import { useEffect, useRef, useState } from "react"
 import { handleParallaxScroll, setTextTyperObserver } from "@/utils"
 import clsx from "clsx"
+import { useMediaQuery } from "usehooks-ts"
 
 export const Hero = () => {
 	const [showTypedText, setShowTypedText] = useState(false)
 
 	const sectionRef = useRef<HTMLElement>(null)
+	const middle = useMediaQuery("(max-width: 1273px) and (min-width: 1023px)")
 
 	useEffect(() => {
 		const section = sectionRef.current
@@ -33,12 +35,12 @@ export const Hero = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className="grid gap-8 sm:mb-38 relative overflow-hidden"
+			className="grid gap-8 lg:mb-38 relative overflow-hidden"
 		>
-			<figure className="hidden sm:flex justify-end">
+			<figure className="hidden lg:flex justify-end">
 				<Image
 					src={SysyemImage}
-					className="h-[50.379rem] w-[40.35rem] left-0 parallax-image-hero"
+					className="h-[50.379rem] w-120 xl:w-[40.35rem] left-0 parallax-image-hero"
 					alt="My picture"
 				/>
 			</figure>
@@ -46,8 +48,8 @@ export const Hero = () => {
 			<Image src={Stars} className="absolute" alt="stars" />
 			<div
 				className={clsx(
-					"grid gap-4 sm:absolute  place-items-center left-10 bottom-[35%] parallax-text-hero",
-					"mt-35 sm:mt-0"
+					"grid gap-4 lg:absolute place-items-center left-10 bottom-[35%] parallax-text-hero",
+					"mt-35 lg:mt-0"
 				)}
 			>
 				<Typography
@@ -73,7 +75,10 @@ export const Hero = () => {
 					fontWeight="light"
 					color="white"
 					align="center"
-					customClassName="max-w-150 w-80 sm:w-full leading-[150%]! z-10!"
+					customClassName={clsx(
+						"max-w-150 w-80 md:w-full leading-[150%]! z-10!",
+						middle && "max-w-130!"
+					)}
 				>
 					Premium web development services to help your business stand out.
 				</Typography>
@@ -83,10 +88,13 @@ export const Hero = () => {
 			</div>
 			<FloatingStars num={1} />
 
-			<figure className="flex sm:hidden justify-end">
+			<figure className="flex lg:hidden justify-end">
 				<Image
 					src={SysyemImage}
-					className={clsx("h-70! w-50! top-[-80] left-10 ", "relative ")}
+					className={clsx(
+						"h-70! sm:h-100! md:h-120! w-50! sm:w-70! md:w-100! top-[-80] sm:top-[-150] md:top-[-190] left-10 ",
+						"relative "
+					)}
 					width={200}
 					height={280}
 					alt="My picture"
