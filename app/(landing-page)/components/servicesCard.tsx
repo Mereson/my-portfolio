@@ -28,7 +28,7 @@ export const ServicesCard = ({ services }: { services: ServicesProps }) => {
 	return (
 		<section
 			ref={cardRef}
-			className=" relative overflow-hidden bg-white p-7 sm:p-12 col-span-1"
+			className="relative overflow-hidden bg-white p-7 sm:p-5 lg:p-12 col-span-1"
 		>
 			{!smallScreen && (
 				<div

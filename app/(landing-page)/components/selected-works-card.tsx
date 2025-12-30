@@ -14,12 +14,12 @@ export const SelectedWorksCard = ({
 	const { pictureURL, work, slug } = selectedWork
 
 	return (
-		<figure className="w-full sm:w-171 h-53 sm:h-[23.971rem] col-span-1 relative rounded-2xl sm:rounded-4xl">
+		<figure className="w-full h-60 lg:h-[23.971rem] col-span-1 relative rounded-2xl sm:rounded-4xl">
 			<Image
 				src={pictureURL}
 				height={383}
 				width={684}
-				className="size-fit rounded-2xl sm:rounded-4xl shadow-lg bg-[#00000062]"
+				className="w-full h-full rounded-2xl sm:rounded-4xl shadow-lg bg-[#00000062]"
 				alt="work"
 			/>
 			<Link
@@ -40,9 +40,9 @@ export const SelectedWorksCard = ({
 				color="secondary"
 				customClassName={clsx(
 					"bg-[#ffffff28] border-[1px] border-[#00000062] backdrop-blur-[15px]",
-					"px-3 sm:px-4 py-1.5 sm:py-3 rounded-4xl mx-4 w-[20rem] sm:w-[38.75rem]",
+					"px-3 sm:px-4 py-1 py-1.5 sm:py-3 rounded-4xl mx-4 w-[90%]",
 					"leading-[130%]! tracking-[1px]",
-					"absolute bottom-[15px] sm:bottom-[32px]"
+					"absolute bottom-8 max-[22.75rem]:bottom-6 "
 				)}
 			>
 				{work}

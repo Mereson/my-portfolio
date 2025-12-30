@@ -22,16 +22,16 @@ const Page = () => {
 					alt="arrow left"
 				/>
 			</Link>
-			<div className="grid grid-cols-1 sm:grid-cols-2 mt-5  gap-10 gap-y-5 sm:gap-y-10">
+			<div className="grid grid-cols-1 lg:grid-cols-2 mt-5 place-items-center  gap-10 gap-y-5 sm:gap-y-10">
 				{isLoading
 					? Array(6)
 							.fill(null)
 							.map((_, i) => (
 								<div
 									key={i}
-									className="w-full sm:w-155 sm:h-[10.688rem] rounded-3xl sm:rounded-4xl border-2 gap-3.5 sm:gap-7 py-2 sm:py-4 px-3 sm:px-5 border-[#6f6e6e] flex items-center"
+									className="w-full sm:h-[10.688rem] lg:h-[13.813rem] xl:h-[10.688rem] lg:flex-col xl:flex-row rounded-3xl sm:rounded-4xl border-2 gap-3.5 sm:gap-7 py-2 sm:py-4 px-3 sm:px-5 border-[#6f6e6e] flex items-center"
 								>
-									<SkeletonLoader customClassName="w-45 sm:w-55 h-[6.2rem] sm:h-[7.9rem] rounded-2xl! sm:rounded-xl!" />
+									<SkeletonLoader customClassName="w-45 sm:w-55 h-[6.2rem] sm:h-[7.9rem]! rounded-2xl! sm:rounded-xl!" />
 									<SkeletonLoader customClassName="w-60 sm:w-70 h-7 sm:h-10.5" />
 								</div>
 							))

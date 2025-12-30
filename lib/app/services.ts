@@ -1,5 +1,12 @@
 import { useQuery } from "@tanstack/react-query"
 
+/**
+ * -----------------------
+ * ---- GET ALL WORKS ----
+ * -----------------------
+ * @description Get all works
+ * @returns Promise
+ */
 export const getAllWorks = async () => {
 	const res = await fetch("/api/get?endpoint=works/")
 
@@ -10,6 +17,13 @@ export const getAllWorks = async () => {
 	return result
 }
 
+/**
+ * ----------------------------
+ * ---- GET SELECTED WORKS ----
+ * ----------------------------
+ * @description Get all works with selected = true
+ * @returns Promise
+ */
 export const getSelectedWorks = async () => {
 	const res = await fetch("/api/get?endpoint=works/selected")
 
@@ -21,6 +35,13 @@ export const getSelectedWorks = async () => {
 	return result
 }
 
+/**
+ * --------------------------
+ * ---- GET WORK BY SLUG ----
+ * --------------------------
+ * @description Get all works by slug property
+ * @returns Promise
+ */
 export const getWorkBySlug = async (slug: string) => {
 	const res = await fetch(`/api/get?endpoint=works/${slug}`)
 

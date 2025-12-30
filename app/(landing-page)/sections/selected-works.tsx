@@ -17,7 +17,7 @@ export const SelectedWorks = () => {
 			id="selected-works"
 			className=" pt-8 sm:pt-[0.813rem] pb-20 relative max-w-[1400px] mx-auto"
 		>
-			<div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-8 mx-10">
+			<div className="grid grid-cols-1 sm:grid-cols-3 gap-y-5 sm:gap-4 md:gap-8 mx-10">
 				{services.map((service, i) => (
 					<ServicesCard key={i} services={service} />
 				))}
@@ -45,16 +45,16 @@ export const SelectedWorks = () => {
 						Works
 					</Typography>
 				</div>
-				<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-6">
+				<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mx-4 place-content-center">
 					{isLoading
 						? Array(4)
 								.fill(null)
 								.map((_, i) => (
 									<div
 										key={i}
-										className="w-full sm:w-171 h-53 sm:h-[23.971rem] col-span-1 rounded-2xl sm:rounded-4xl border border-[#6f6e6e]"
+										className="w-full h-60 lg:h-[23.971rem] col-span-1 rounded-2xl sm:rounded-4xl border border-[#6f6e6e]"
 									>
-										<SkeletonLoader customClassName="w-full sm:w-171 h-53 sm:h-[23.971rem] rounded-2xl sm:rounded-4xl!" />
+										<SkeletonLoader customClassName="w-full h-full rounded-2xl! sm:rounded-4xl!" />
 									</div>
 								))
 						: worksList.map((selectedWork) => (
